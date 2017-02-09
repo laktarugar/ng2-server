@@ -11,6 +11,7 @@ var fake = require('./routes/fake');
 const {loggedMidlevare, nonLoggedMidlevare} = require('./midlewares/auth');
 
 var app = express();
+app.set('port', (process.env.PORT || 5000));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
